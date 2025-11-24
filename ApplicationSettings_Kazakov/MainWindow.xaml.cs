@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+// Добавьте это, если класс Settings находится в этом namespace
+using ApplicationSettings_Kazakov.Pages;
+
 namespace ApplicationSettings_Kazakov
 {
     /// <summary>
@@ -20,15 +23,17 @@ namespace ApplicationSettings_Kazakov
     /// </summary>
     public partial class MainWindow : Window
     {
-        public enum pages{
+        public enum pages
+        {
             settings
         }
 
         public void OpenPages(pages _pages)
         {
             if (_pages == pages.settings)
-                frame.Navigate(new Pages().Settings(this));
+                frame.Navigate(new Pages.Settings(this));
         }
+
         public MainWindow()
         {
             InitializeComponent();

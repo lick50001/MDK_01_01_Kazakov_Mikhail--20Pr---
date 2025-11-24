@@ -57,27 +57,30 @@
                     <Grid Margin="0.2,0.2,-0.4,51.2">
                         <Label Content="Цвет приложения:" HorizontalAlignment="Left" Margin="10,10,0,0"
                                VerticalAlignment="Top"/>
-                        <Grid x:Name="gr_application" Margin="127,10,584,0" Background="Black" Height="27"
-                              VerticalAlignment="Top"></Grid>
+                        <Rectangle x:Name="gr_application" Fill="Black" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                                Width="50" Height="27" Margin="127,10,0,0"/>
                         <Button Click="SelectColorApplication" Content="Выбрать" HorizontalAlignment="Left"
                               Margin="182,10,0,0" VerticalAlignment="Top" Width="150" Height="26"/>
-                       
+
                     </Grid>
                     <Grid Margin="0,41,-0.2,10.4">
-                        <Label Content="Цвет текста:" HorizontalAlignment="Left" Margin="10,10,0,0"
-                               VerticalAlignment="Top"/>
-                        <Grid Margin="127,10,584,0" Background="Black" Height="27" VerticalAlignment="Top"></Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Цвет текста:" HorizontalAlignment="Left" Margin="10,0,0,0"
+                               VerticalAlignment="Center" Height="26" Width="76"/>
+                        <Rectangle x:Name="gr_textColor" Fill="Black" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                                Width="50" Height="27" Margin="127,0,0,0"/>
                         <Button Click="SelectColorText" Content="Выбрать" HorizontalAlignment="Left"
-                                Margin="182,10,0,0" VerticalAlignment="Top" Width="150" Height="26"/>
+                                Margin="183,0,0,0" VerticalAlignment="Center" Width="150" Height="26"/>
                     </Grid>
                 </Grid>
             </Border>
 
             <Border BorderBrush="Black" BorderThickness="1" Height="50" Margin="10,280,10,0" VerticalAlignment="Top">
                 <Grid>
-                    <Label Content="Segoe UI" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="614"/>
-                    <Button Click="SelectFonts" Content="Выбрать" HorizontalAlignment="Left" Margin="629,10,0,0" 
-                VerticalAlignment="Top" Width="121" Height="25"/>
+                    <TextBlock x:Name="tb_fontPreview" Text="Segoe UI" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="614"/>
+                    <Button Click="SelectFonts" Content="Выбрать" HorizontalAlignment="Right" Margin="0,0,10,13" Width="121" Height="25" VerticalAlignment="Bottom"/>
                 </Grid>
             </Border>
 
